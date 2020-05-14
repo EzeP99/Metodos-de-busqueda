@@ -56,8 +56,7 @@ int SecuencialDes(){
 	 
 	 int v[n]; //declaramos vec ya que tenemos nuestro tamaño n.
 	 
-	 cout<<"Colocando valores aleatorios dentro del vector"<<endl;
-	 
+	 cout<<"Valores Del vector\n";
 	 for(i=0; i<n; i++){  //Llenamos el vector 
 	 
 	 	v[i] = rand()%(100+1);
@@ -114,17 +113,17 @@ int SecuencialOrd(){
 
 int Bin(){
 	int x;
-	int n=20;
-	int v[n]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+	int n=10;
+	int v[]={0,1,2,3,4,5,6,7,8,9};
 	int izq;
-	int cen=0;
+	int cen;
 	int der;
 	int i;
 	
-		cout<<"Ingresa el numero a buscar en el vector del 1 al 20: "<<endl;
+		cout<<"Ingresa el numero a buscar en el vector del 1 al 10: "<<endl;
      	cin>>x;
      	
-  for (i=0; i<n; i++){
+  for (i=0; i<n ;i++){
 	 	cout<<"Posicion del Numero segun el interador:\t "<<i<<"\t"<<"["<<v[i]<<"]"<<endl;
 	 	cout<<endl;
 	 }
@@ -132,9 +131,9 @@ int Bin(){
 	 izq=1;
 	 der=n;
 	 bool ban=false;
+	cen=x;
 	 
 	 while((izq <= der) && (ban == false)){
-	 	cen = (izq+der)/2;
 	 	if( x == v[cen]) {
 	 		ban=true;
 		 }else{
@@ -147,7 +146,7 @@ int Bin(){
 	    }
 	    
 	    if( ban == true){
-	    	cout<<"La informacion esta en la posicion"<< cen <<endl;
+	    	cout<<"La informacion esta en la posicion: \t"<< cen <<endl;
 	    	}else{
 	    		cout<<"La informacion no se encuentra en el arreglo"<<endl;
 			}
